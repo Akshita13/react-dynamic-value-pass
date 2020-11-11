@@ -1,0 +1,11 @@
+h1, p {
+  font-family: Lato;
+  color: black;
+}
+
+.queueDiv{
+  border: 1px solid black;
+  height:100px;
+  background-color: lightblue;
+  /* width:100px; */
+}
