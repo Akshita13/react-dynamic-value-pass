@@ -68,11 +68,7 @@ const customerData = [
 
 
 export default function App() {
-  return (
-    <>
-    {<div>
-      <h1>Hello StackBlitz!</h1>
-     { customerData && Object.keys(queue_counts).forEach((keyValue1,index)=>{
+      { customerData && Object.keys(queue_counts).forEach((keyValue1,index)=>{
        queue_counts[keyValue1].forEach((keyValue2,index1)=>{
          customerData.forEach((customer,i)=>{
            if(customer.subQueueId===keyValue2.subQueueId)
@@ -84,21 +80,15 @@ export default function App() {
      
        })
      })}
-        <div className="queueDiv">
-          {Object.keys(queue_counts).forEach((keyValue1,index)=>{
-       queue_counts[keyValue1].forEach((keyValue2,index1)=> (
-            <div>
-            <p>{keyValue2.name}</p>
-           
-            <br/><br/>
-            </div>
-          ))})}
-        </div>
+  return (
 
-
-
-    </div>}
-    </>
+      <div className="queueDiv">
+          {Object.keys(queue_counts).forEach((keyValue1,index)=>{ 
+            return(queue_counts[keyValue1].forEach((keyValue2,index1)=> {
+            return(<p>{keyValue2.name}</p>)
+          }))})}
+     </div>
+   
   )
 
 
